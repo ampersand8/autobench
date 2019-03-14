@@ -1,0 +1,54 @@
+{
+    "configuration": {
+        "clusters": [
+            {
+                "name": "kafka",
+                "url": "kafka:9092"
+            },
+            {
+                "name": "nats",
+                "url": "nats://nats:4222"
+            }
+        ],
+        "waitBetweenTests": "30"
+    },
+    "tests": [
+        {
+            "id": "T01",
+            "clusters": ["kafka"],
+            "rate": "3000",
+            "payload": "256",
+            "connections": "25",
+            "duration": "30m",
+            "max_retries": "3"
+         },
+         {
+            "id": "T02",
+            "clusters": ["kafka"],
+            "rate": "3000",
+            "payload": "1024",
+            "connections": "25",
+            "duration": "30m",
+            "max_retries": "3"
+         },
+         {
+            "id": "T03",
+            "clusters": ["kafka"],
+            "rate": "2000",
+            "payload": "5120",
+            "connections": "25",
+            "duration": "30m",
+            "max_retries": "3"
+         },
+         {
+            "id": "T04",
+            "clusters": ["kafka"],
+            "rate": "20000",
+            "payload": "1024",
+            "connections": "25",
+            "duration": "30m",
+            "max_retries": "3"
+         }
+    ]
+}
+

@@ -1,0 +1,5 @@
+aws/awssetup.key
+aws/results
+aws/publicIp.txt
+continuous.log
+.vscode/

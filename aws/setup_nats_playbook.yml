@@ -1,0 +1,13 @@
+---
+# ansible-playbook --private-key=awssetup.key mongodb_sharding_playbook.yml
+- name: Setup NATS
+  hosts: nats
+  remote_user: ubuntu
+  sudo: yes
+  tasks:
+  - name: Copy helper script
+    copy:
+      src: /home/ubuntu/helper.sh
+      dest: /home/ubuntu/helper.sh
+  - name: Transfer and execute the setup script
+    script: /home/ubuntu/setup_nats.sh

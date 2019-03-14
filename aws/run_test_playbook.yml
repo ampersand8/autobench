@@ -1,0 +1,13 @@
+---
+- name: Run environment tests
+  hosts: all
+  remote_user: ubuntu
+  tasks:
+  - name: Transfer and execute environment test script
+    script: /home/ubuntu/environment_tests.sh
+- name: Run test
+  hosts: test
+  remote_user: ubuntu
+  tasks:
+  - name: Transfer and execute the test script
+    script: /home/ubuntu/autotest.py
