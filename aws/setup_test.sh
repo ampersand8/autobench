@@ -53,7 +53,7 @@ sudo systemctl restart dnsmasq.service
 
 mkdir -p test
 cd test
-wget --tries=10 "https://github.com/ampersand8/autobench/master/bench.tar.gz" -O bench.tar.gz
+wget --tries=10 "https://github.com/ampersand8/autobench/blob/master/bench.tar.gz" -O bench.tar.gz
 tar xzf bench.tar.gz
 
 cat <<EOF | sudo tee config.json > /dev/null
